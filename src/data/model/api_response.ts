@@ -7,43 +7,43 @@ export class HttpResponse {
         this.value = _value;
     }
 
-    public static okWithValue(value: any): HttpResponse {
+    public static OkWithValue(value: any): HttpResponse {
         return new HttpResponse(200, value);
     }
 
-    public static createdWithValue(value: any): HttpResponse {
+    public static CreatedWithValue(value: any): HttpResponse {
         return new HttpResponse(201, value);
     }
 
-    public static get ok(): HttpResponse {
+    public static get Ok(): HttpResponse {
         return new HttpResponse(200, undefined);
     }
 
-    public static get created(): HttpResponse {
+    public static get Created(): HttpResponse {
         return new HttpResponse(201, undefined);
     }
 
-    public static get badRequest(): HttpResponse {
+    public static get BadRequest(): HttpResponse {
         return new HttpResponse(400, 'Bad request');
     }
 
-    public static get unauthorized(): HttpResponse {
+    public static get Unauthorized(): HttpResponse {
         return new HttpResponse(401, 'Unauthorized');
     }
 
-    public static get forbidden(): HttpResponse {
+    public static get Forbidden(): HttpResponse {
         return new HttpResponse(403, 'Forbidden');
     }
 
-    public static get notFound(): HttpResponse {
+    public static get NotFound(): HttpResponse {
         return new HttpResponse(404, 'Not found')
     }
 
-    public static get methodNotAllowed(): HttpResponse {
+    public static get MethodNotAllowed(): HttpResponse {
         return new HttpResponse(405, 'Method not allowed')
     }
 
-    public static get conflict(): HttpResponse {
+    public static get Conflict(): HttpResponse {
         return new HttpResponse(409, 'Conflict');
     }
 }
