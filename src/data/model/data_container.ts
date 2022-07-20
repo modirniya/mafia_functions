@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import {ContainerCategory} from "../../constant/enums";
+import { v4 as uuid } from 'uuid';
 
 export class DataContainer {
     readonly method: string;
@@ -19,7 +20,11 @@ export class DataContainer {
     public static fromRequest(category: ContainerCategory, request: functions.https.Request): DataContainer | undefined {
         let key = request.header('id');
         if (key == null) return undefined
-        return new DataContainer(request.method, category, [], key, request.body);
+        let value = request.body;
+        if (category == ContainerCategory.Uuid) {
+            value = uuid();
+        }
+        return new DataContainer(request.method, category, [], key, value);
     }
 
 }

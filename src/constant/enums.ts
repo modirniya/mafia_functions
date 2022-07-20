@@ -6,6 +6,6 @@ export enum HttpMethods {
 }
 
 export enum ContainerCategory {
-    Username = "USERNAME",
+    Uuid = "UUID",
     Profile = "PROFILE"
 }

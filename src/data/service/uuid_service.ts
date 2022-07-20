@@ -1,8 +1,10 @@
-import {BaseProvider} from "./base_provider";
-import {HttpResponse} from "../model/api_response";
-import {HttpMethods} from "../../constant/enums";
 
-export class UsernameProvider extends BaseProvider {
+import {HttpResponse} from "../model/http_response";
+import {HttpMethods} from "../../constant/enums";
+import { BaseService } from "./base_service";
+
+
+export class UuidService extends BaseService {
 
     async process(): Promise<HttpResponse> {
         if (this.container == null) {

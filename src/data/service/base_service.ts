@@ -1,7 +1,7 @@
 import {FirebaseDbFacade} from "../../core/firebase_db_facade";
 import {DataContainer} from "../model/data_container";
 
-export class BaseProvider {
+export class BaseService {
     readonly container: DataContainer | undefined;
 
     constructor(container?: DataContainer) {
